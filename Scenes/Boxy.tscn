@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Boxy.cs" type="Script" id=1]
+[ext_resource path="res://Assets/BodyBox.tscn" type="PackedScene" id=2]
+
+[node name="Boxy" type="KinematicBody"]
+script = ExtResource( 1 )
+
+[node name="Head" parent="." instance=ExtResource( 2 )]
+
+[node name="Body" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
+
+[node name="Body2" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2 )
+
+[node name="Body3" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
+
+[node name="Body4" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1 )
+
+[node name="Body5" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.707107, -0.395409, 0.586218, 0, 0.829037, 0.559193, -0.707107, -0.395409, 0.586218, 20, 20, 20 )
+projection = 1
+size = 10.0
+near = 0.02
+far = 46.3
